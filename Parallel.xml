@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="3" parallel="tests">
+  <test  name="Test1">
+    <classes>
+      <class name="Contacts.createContact"/>
+      <class name="Organization.createOrganization"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test  name="Test2">
+    <classes>
+      <class name="Contacts.createContactWithSupportDate"/>
+      <class name="Organization.createOrganizationWithIndustryAndType"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test  name="Test3">
+    <classes>
+      <class name="Contacts.createContactWithOrgname"/>
+      <class name="Organization.createOrganizationWithPhoneNumber"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

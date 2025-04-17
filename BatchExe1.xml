@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Contacts.createContact"/>
+      <class name="Contacts.createContactWithSupportDate"/>
+      <class name="Organization.createOrganizationWithIndustryAndType"/>
+      <class name="Contacts.createContactWithOrgname"/>
+      <class name="Organization.createOrganizationWithPhoneNumber"/>
+      <class name="Organization.createOrganization"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

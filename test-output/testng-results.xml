@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Report configuration]]>
+    </line>
+    <line>
+      <![CDATA[Configure the DB:Connect]]>
+    </line>
+    <line>
+      <![CDATA[BT:Parallel Exe]]>
+    </line>
+    <line>
+      <![CDATA[Launch the browser]]>
+    </line>
+    <line>
+      <![CDATA[Login to the appln]]>
+    </line>
+    <line>
+      <![CDATA[createorgaWithIndustry--Started--]]>
+    </line>
+    <line>
+      <![CDATA[createorgaWithIndustry--Success--]]>
+    </line>
+    <line>
+      <![CDATA[Logout to the appln]]>
+    </line>
+    <line>
+      <![CDATA[Login to the appln]]>
+    </line>
+    <line>
+      <![CDATA[createorganization--Started--]]>
+    </line>
+    <line>
+      <![CDATA[createorganization--Success--]]>
+    </line>
+    <line>
+      <![CDATA[Logout to the appln]]>
+    </line>
+    <line>
+      <![CDATA[Login to the appln]]>
+    </line>
+    <line>
+      <![CDATA[createorganizationwithphnno--Started--]]>
+    </line>
+    <line>
+      <![CDATA[createorganizationwithphnno--Success--]]>
+    </line>
+    <line>
+      <![CDATA[Logout to the appln]]>
+    </line>
+    <line>
+      <![CDATA[close the browser]]>
+    </line>
+    <line>
+      <![CDATA[AT:Parallel Exe]]>
+    </line>
+    <line>
+      <![CDATA[Close the DB Connection]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2025-04-16T15:37:57 IST" name="Default suite" finished-at="2025-04-16T15:38:51 IST" duration-ms="54691">
+    <groups>
+      <group name="reg">
+        <method signature="createOrganizationScenarios.createorganizationwithphnno()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" name="createorganizationwithphnno" class="Organization.createOrganizationScenarios"/>
+      </group> <!-- reg -->
+      <group name="regression">
+        <method signature="createOrganizationScenarios.createorgaWithIndustry()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" name="createorgaWithIndustry" class="Organization.createOrganizationScenarios"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="createOrganizationScenarios.createorganization()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" name="createorganization" class="Organization.createOrganizationScenarios"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2025-04-16T15:37:57 IST" name="Default test" finished-at="2025-04-16T15:38:51 IST" duration-ms="54691">
+      <class name="Organization.createOrganizationScenarios">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:37:56 IST" name="beforeSuite" finished-at="2025-04-16T15:37:57 IST" duration-ms="362" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Configure the DB:Connect]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:37:57 IST" name="beforeTest" finished-at="2025-04-16T15:37:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[BT:Parallel Exe]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:37:57 IST" name="beforeClass" finished-at="2025-04-16T15:37:59 IST" duration-ms="1943" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Launch the browser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:37:59 IST" name="beforeMethod" finished-at="2025-04-16T15:38:03 IST" duration-ms="4120" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to the appln]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="createorgaWithIndustry()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:38:03 IST" name="createorgaWithIndustry" finished-at="2025-04-16T15:38:13 IST" duration-ms="9935" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[createorgaWithIndustry--Started--]]>
+            </line>
+            <line>
+              <![CDATA[createorgaWithIndustry--Success--]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createorgaWithIndustry -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:38:13 IST" name="afterMethod" finished-at="2025-04-16T15:38:16 IST" duration-ms="2917" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logout to the appln]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:38:16 IST" name="beforeMethod" finished-at="2025-04-16T15:38:16 IST" duration-ms="463" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to the appln]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="createorganization()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:38:16 IST" name="createorganization" finished-at="2025-04-16T15:38:29 IST" duration-ms="13077" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[createorganization--Started--]]>
+            </line>
+            <line>
+              <![CDATA[createorganization--Success--]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createorganization -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:38:29 IST" name="afterMethod" finished-at="2025-04-16T15:38:32 IST" duration-ms="3184" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logout to the appln]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:38:32 IST" name="beforeMethod" finished-at="2025-04-16T15:38:35 IST" duration-ms="2415" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to the appln]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="createorganizationwithphnno()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:38:35 IST" name="createorganizationwithphnno" finished-at="2025-04-16T15:38:47 IST" duration-ms="12805" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[createorganizationwithphnno--Started--]]>
+            </line>
+            <line>
+              <![CDATA[createorganizationwithphnno--Success--]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createorganizationwithphnno -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:38:47 IST" name="afterMethod" finished-at="2025-04-16T15:38:51 IST" duration-ms="3305" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logout to the appln]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:38:51 IST" name="afterClass" finished-at="2025-04-16T15:38:51 IST" duration-ms="476" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[close the browser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:38:51 IST" name="afterTest" finished-at="2025-04-16T15:38:51 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[AT:Parallel Exe]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:Organization.createOrganizationScenarios@5890e879]" started-at="2025-04-16T15:38:51 IST" name="afterSuite" finished-at="2025-04-16T15:38:51 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Close the DB Connection]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- Organization.createOrganizationScenarios -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
