@@ -92,7 +92,7 @@ public class WebDriver_Utility {
 	public void QuitTheBrowser(WebDriver driver) {
 		driver.quit();
 	}
-
+//This method is used to close the current window
 	public void CloseTheBrowser(WebDriver driver) {
 		driver.close();
 	}
