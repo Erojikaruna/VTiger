@@ -29,23 +29,24 @@ public class Baseclass {
 	
 	public static WebDriver sdriver = null;
 
-	@BeforeSuite
+	@BeforeSuite (groups = {"smoke", "regression"})
 	public void beforeSuite() {
 		Reporter.log("Configure the DB:Connect", true);
 		db.getDatabaseConnection();
 	}
 
-	@BeforeTest
+	@BeforeTest(groups = {"smoke", "regression"})
 	public void beforeTest() {
 		Reporter.log("BT:Parallel Exe", true);
 	}
 
-	@BeforeClass
+	@BeforeClass(groups = {"smoke", "regression"})
 	public void beforeClass() throws IOException {
 		
 		Reporter.log("Launch the browser", true);
 		
-		String Browser = pro.FetchDataFromPropertyFile("Browser");
+		//String Browser = pro.FetchDataFromPropertyFile("Browser");
+		String Browser = System.getProperty("Browser",pro.FetchDataFromPropertyFile("Browser"));
 		
 		if (Browser.equals("chrome")) {
 			driver = new ChromeDriver();
@@ -57,13 +58,18 @@ public class Baseclass {
 		sdriver = driver;
 	}
 
-	@BeforeMethod
+	@BeforeMethod(groups = {"smoke", "regression"})
 	public void beforeMethod() throws IOException {
 		Reporter.log("Login to the appln", true);
 		
-		String url = (pro.FetchDataFromPropertyFile("url"));
-		String username = (pro.FetchDataFromPropertyFile("username"));
-		String pwd = (pro.FetchDataFromPropertyFile("password"));
+//		String url = (pro.FetchDataFromPropertyFile("url"));
+//		String username = (pro.FetchDataFromPropertyFile("username"));
+//		String pwd = (pro.FetchDataFromPropertyFile("password"));
+		
+		String url = System.getProperty("url", pro.FetchDataFromPropertyFile("url"));
+		String username = System.getProperty("username",pro.FetchDataFromPropertyFile("username"));
+		String pwd = System.getProperty("password",pro.FetchDataFromPropertyFile("password"));
+		
 		LoginPomPage l = new LoginPomPage(driver);
 		w_util.navigateToAnAppl(driver, url);
 		w_util.maximizeTheWindow(driver);
@@ -73,26 +79,26 @@ public class Baseclass {
 		
 	}
 
-	@AfterMethod
+	@AfterMethod(groups = {"smoke", "regression"})
 	public void afterMethod() {
 		Reporter.log("Logout to the appln", true);
 		HomePomPage home = new HomePomPage(driver);
 		home.logout(driver);
 	}
 
-	@AfterClass
+	@AfterClass(groups = {"smoke", "regression"})
 	public void afterClass() {
 		Reporter.log("close the browser", true);
 		WebDriver_Utility wb = new WebDriver_Utility();
 		wb.QuitTheBrowser(driver);
 	}
 
-	@AfterTest
+	@AfterTest(groups = {"smoke", "regression"})
 	public void afterTest() {
 		Reporter.log("AT:Parallel Exe", true);
 	}
 
-	@AfterSuite
+	@AfterSuite(groups = {"smoke", "regression"})
 	public void afterSuite() {
 		Reporter.log("Close the DB Connection", true);
 		db.closeDatabaseConnection();

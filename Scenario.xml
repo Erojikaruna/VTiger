@@ -6,7 +6,7 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Organization.createOrganizationScenariosTest"/>
+      <class name="Organization.CreateOrganizationScenariosTest"/>
       <class name="Contacts.CreateContactScenariosTest"/>
     </classes>
   </test> <!-- Test -->

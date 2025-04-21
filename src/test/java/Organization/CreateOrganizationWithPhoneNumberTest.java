@@ -27,7 +27,7 @@ import POM_Pages.LoginPomPage;
 import POM_Pages.OrgDetailPomPage;
 import POM_Pages.OrganizationPomPage;
 
-public class createOrganizationWithPhoneNumber extends Baseclass{
+public class CreateOrganizationWithPhoneNumberTest extends Baseclass{
 	//@Parameters("browser")
 	@Test(groups = "reg")
 	public void createorganization() throws EncryptedDocumentException, IOException, InterruptedException {

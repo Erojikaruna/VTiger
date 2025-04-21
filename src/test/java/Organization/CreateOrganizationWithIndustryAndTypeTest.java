@@ -24,7 +24,7 @@ import POM_Pages.LoginPomPage;
 import POM_Pages.OrgDetailPomPage;
 import POM_Pages.OrganizationPomPage;
 
-public class createOrganizationWithIndustryAndType extends Baseclass {
+public class CreateOrganizationWithIndustryAndTypeTest extends Baseclass {
 	// @Parameters("browser")
 	@Test(groups = "regression")
 

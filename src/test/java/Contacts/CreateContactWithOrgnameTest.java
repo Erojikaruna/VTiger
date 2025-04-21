@@ -27,7 +27,7 @@ import POM_Pages.LoginPomPage;
 import POM_Pages.OrgDetailPomPage;
 import POM_Pages.OrganizationPomPage;
 
-public class createContactWithOrgname extends Baseclass {
+public class CreateContactWithOrgnameTest extends Baseclass {
 
 	// @Parameters("browser")
 	@Test(groups = "regression")

@@ -20,7 +20,7 @@ import POM_Pages.CreateNewContactPomPage;
 import POM_Pages.HomePomPage;
 
 //@Listeners(ListenersUtility.Listeners.class)
-public class createContact extends Baseclass {
+public class CreateContactTest extends Baseclass {
 	// @Parameters("browser")
 	@Test(groups = "smoke")
 	public void CreateContact() throws IOException {

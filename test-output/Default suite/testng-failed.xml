@@ -3,21 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Contacts.CreateContactScenarios">
+      <class name="Contacts.CreateContactScenariosTest">
         <methods>
           <include name="afterTest"/>
           <include name="beforeMethod"/>
+          <include name="CreateContactwithsupportdate"/>
           <include name="beforeClass"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="afterSuite"/>
-          <include name="CreateContactwithorg"/>
-          <include name="CreateContactwithsupportdate"/>
-          <include name="beforeSuite"/>
           <include name="CreateContact"/>
+          <include name="beforeSuite"/>
+          <include name="CreateContactwithorg"/>
           <include name="afterClass"/>
         </methods>
-      </class> <!-- Contacts.CreateContactScenarios -->
+      </class> <!-- Contacts.CreateContactScenariosTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

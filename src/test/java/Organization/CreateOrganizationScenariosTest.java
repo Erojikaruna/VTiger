@@ -22,10 +22,10 @@ import POM_Pages.CreateNewOrganization;
 import POM_Pages.HomePomPage;
 import POM_Pages.OrgDetailPomPage;
 import POM_Pages.OrganizationPomPage;
-@Listeners(ListenersUtility.Listeners.class)
-public class createOrganizationScenarios extends Baseclass {
+//@Listeners(ListenersUtility.Listeners.class)
+public class CreateOrganizationScenariosTest extends Baseclass {
 
-	@Test(groups = "smoke")
+	@Test(groups = "smoke", retryAnalyzer = ListenersUtility.RetryAnalyser_Utility.class)
 
 	public void createorganization() throws IOException, InterruptedException {
 
@@ -78,7 +78,7 @@ public class createOrganizationScenarios extends Baseclass {
 		soft.assertAll();
 	}
 	
-	@Test(groups = "regression")
+	@Test(groups = "regression", retryAnalyzer = ListenersUtility.RetryAnalyser_Utility.class)
 
 	public void createorgaWithIndustry() throws IOException, InterruptedException {
 
@@ -152,7 +152,7 @@ public class createOrganizationScenarios extends Baseclass {
 		soft.assertAll();
 
 }
-	@Test(groups = "reg")
+	@Test(groups = "regression", retryAnalyzer = ListenersUtility.RetryAnalyser_Utility.class)
 	public void createorganizationwithphnno() throws EncryptedDocumentException, IOException, InterruptedException {
 
 		ClassObject_Utility.getTest().log(Status.INFO, "Fetching the Data from Excel file");

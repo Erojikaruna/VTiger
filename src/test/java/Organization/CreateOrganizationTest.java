@@ -26,7 +26,7 @@ import POM_Pages.LoginPomPage;
 import POM_Pages.OrgDetailPomPage;
 import POM_Pages.OrganizationPomPage;
 
-public class createOrganization extends Baseclass {
+public class CreateOrganizationTest extends Baseclass {
 	//@Parameters("browser")
 	@Test(groups = "smoke", retryAnalyzer = ListenersUtility.RetryAnalyser_Utility.class)
 

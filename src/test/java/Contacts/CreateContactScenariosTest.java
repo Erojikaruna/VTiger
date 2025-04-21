@@ -24,10 +24,10 @@ import POM_Pages.HomePomPage;
 import POM_Pages.OrgDetailPomPage;
 import POM_Pages.OrganizationPomPage;
 
-@Listeners(ListenersUtility.Listeners.class)
-public class CreateContactScenarios extends Baseclass {
+//@Listeners(ListenersUtility.Listeners.class)
+public class CreateContactScenariosTest extends Baseclass {
 
-	@Test(groups = "smoke", retryAnalyzer = ListenersUtility.RetryAnalyser_Utility.class)
+	@Test(groups = "smoke") //retryAnalyzer = ListenersUtility.RetryAnalyser_Utility.class)
 	public void CreateContact() throws IOException {
 
 		WebDriver_Utility w_util = new WebDriver_Utility();
@@ -74,7 +74,7 @@ public class CreateContactScenarios extends Baseclass {
 		home.getCont_tab();
 
 		driver.findElement(
-				By.xpath("//a[text()='" + lastname + "']/ancestor::tr[@bgcolor='white']/descendant::a[text()='del']"))
+				By.xpath("//a[text()='"+lastname+"']/ancestor::tr[@bgcolor='white']/descendant::a[text()='del']"))
 				.click();
 
 		// Handle the popup

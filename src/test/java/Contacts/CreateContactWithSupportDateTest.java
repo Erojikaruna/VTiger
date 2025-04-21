@@ -24,7 +24,7 @@ import POM_Pages.CreateNewContactPomPage;
 import POM_Pages.HomePomPage;
 import POM_Pages.LoginPomPage;
 
-public class createContactWithSupportDate extends Baseclass {
+public class CreateContactWithSupportDateTest extends Baseclass {
 	//@Parameters("browser")
 	@Test(groups ="regression")
 	public void CreateContact() throws IOException, InterruptedException {
