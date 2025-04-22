@@ -27,12 +27,12 @@ import POM_Pages.OrganizationPomPage;
 //@Listeners(ListenersUtility.Listeners.class)
 public class CreateContactScenariosTest extends Baseclass {
 
-	@Test(groups = "smoke") //retryAnalyzer = ListenersUtility.RetryAnalyser_Utility.class)
+	@Test(groups = "smoke") // retryAnalyzer = ListenersUtility.RetryAnalyser_Utility.class)
 	public void CreateContact() throws IOException {
 
 		WebDriver_Utility w_util = new WebDriver_Utility();
 		ClassObject_Utility.getTest().log(Status.INFO, "Fetch data from Excel File");
-		
+
 		// Fetch data from Excel
 		Excel_Utility excel_util = new Excel_Utility();
 		Java_Utility j_util = new Java_Utility();
@@ -45,8 +45,8 @@ public class CreateContactScenariosTest extends Baseclass {
 		boolean exp_res = home.getHeader().contains("Home");
 		SoftAssert soft = new SoftAssert();
 		soft.assertEquals(exp_res, true);
-		
-		//Identify contact tab in home page
+
+		// Identify contact tab in home page
 		ClassObject_Utility.getTest().log(Status.INFO, "navigate to contact tab");
 		home.getCont_tab();
 		// driver.findElement(By.linkText("Contacts")).click();
@@ -62,19 +62,19 @@ public class CreateContactScenariosTest extends Baseclass {
 		newcon.getLastname_TF(lastname);
 		newcon.getSaveBtn();
 
-		//verify actual contact name with expected contact name
+		// verify actual contact name with expected contact name
 		ClassObject_Utility.getTest().log(Status.INFO, "Verifying the contact");
 		ContactDetailPomPage condetail = new ContactDetailPomPage(driver);
-		//String header = condetail.getHeader();
+		// String header = condetail.getHeader();
 		boolean exp_res1 = condetail.getHeader().contains(lastname);
-		Assert.assertEquals(exp_res1,true);
+		Assert.assertEquals(exp_res1, true);
 
-		//click on contact tab and delete the created org
+		// click on contact tab and delete the created org
 		ClassObject_Utility.getTest().log(Status.INFO, "Navigate to contact tab and delete the contact");
 		home.getCont_tab();
 
 		driver.findElement(
-				By.xpath("//a[text()='"+lastname+"']/ancestor::tr[@bgcolor='white']/descendant::a[text()='del']"))
+				By.xpath("//a[text()='" + lastname + "']/ancestor::tr[@bgcolor='white']/descendant::a[text()='del']"))
 				.click();
 
 		// Handle the popup
@@ -83,10 +83,9 @@ public class CreateContactScenariosTest extends Baseclass {
 		soft.assertAll();
 
 	}
-	
+
 	@Test(groups = "regression", retryAnalyzer = ListenersUtility.RetryAnalyser_Utility.class)
 	public void CreateContactwithorg() throws IOException, InterruptedException {
-
 
 		WebDriver_Utility w_util = new WebDriver_Utility();
 		ClassObject_Utility.getTest().log(Status.INFO, "Fetch data from Excel File");
@@ -97,15 +96,14 @@ public class CreateContactScenariosTest extends Baseclass {
 		String lastname = excel_util.FetchDataFromExcelFile("Contact", 9, 3) + random;
 		String orgname = excel_util.FetchDataFromExcelFile("Contact", 9, 4) + random;
 
-		
 		// Identigy organization tab in home page and click on it
 		ClassObject_Utility.getTest().log(Status.INFO, "Home page verification");
 		HomePomPage home = new HomePomPage(driver);
 		boolean exp_res = home.getHeader().contains("Home");
 		SoftAssert soft = new SoftAssert();
 		soft.assertEquals(exp_res, true);
-		
-		//Identify org tab and click on it
+
+		// Identify org tab and click on it
 		ClassObject_Utility.getTest().log(Status.INFO, "navigate to organization tab");
 		home.getOrg_tab();
 
@@ -126,7 +124,7 @@ public class CreateContactScenariosTest extends Baseclass {
 		boolean exp_res1 = orgdetail.getHeader().contains(orgname);
 		Assert.assertEquals(exp_res1, true);
 
-        //Click on Contact tab
+		// Click on Contact tab
 		ClassObject_Utility.getTest().log(Status.INFO, "navigate to contact tab");
 		home.getCont_tab();
 
@@ -157,7 +155,7 @@ public class CreateContactScenariosTest extends Baseclass {
 
 		ClassObject_Utility.getTest().log(Status.INFO, "Verifying contact name with org name");
 		ContactDetailPomPage condetail = new ContactDetailPomPage(driver);
-        boolean exp_res_con = condetail.getHeader().contains(lastname);
+		boolean exp_res_con = condetail.getHeader().contains(lastname);
 		Assert.assertEquals(exp_res_con, true);
 
 		ClassObject_Utility.getTest().log(Status.INFO, "navigate to contact tab and delete the contact");
@@ -170,18 +168,18 @@ public class CreateContactScenariosTest extends Baseclass {
 		Thread.sleep(2000);
 		ClassObject_Utility.getTest().log(Status.INFO, "Handling delete popup");
 		w_util.HandleAlertAndAccept(driver);
-	
+
 		ClassObject_Utility.getTest().log(Status.INFO, "navigate to org tab and delete org");
 		home.getOrg_tab();
 		soft.assertAll();
 	}
-	
-	@Test(groups ="regression", retryAnalyzer = ListenersUtility.RetryAnalyser_Utility.class)
+
+	@Test(groups = "regression", retryAnalyzer = ListenersUtility.RetryAnalyser_Utility.class)
 	public void CreateContactwithsupportdate() throws IOException, InterruptedException {
 
 		WebDriver_Utility w_util = new WebDriver_Utility();
 		ClassObject_Utility.getTest().log(Status.INFO, "Fetch data from Excel file");
-		
+
 		// Fetch the data from Excel
 		Excel_Utility excel_util = new Excel_Utility();
 		Java_Utility j_util = new Java_Utility();
@@ -194,7 +192,7 @@ public class CreateContactScenariosTest extends Baseclass {
 		boolean exp_res = home.getHeader().contains("Home");
 		SoftAssert soft = new SoftAssert();
 		soft.assertEquals(exp_res, true);
-		
+
 		ClassObject_Utility.getTest().log(Status.INFO, "navigate to contact tab");
 		home.getCont_tab();
 
@@ -203,7 +201,7 @@ public class CreateContactScenariosTest extends Baseclass {
 		ContactPomPage con = new ContactPomPage(driver);
 		con.getPlusicon();
 
-		//driver.findElement(By.name("lastname")).sendKeys(lastname);
+		// driver.findElement(By.name("lastname")).sendKeys(lastname);
 		ClassObject_Utility.getTest().log(Status.INFO, "Create new conatct");
 		CreateNewContactPomPage newcon = new CreateNewContactPomPage(driver);
 		newcon.getLastname_TF(lastname);
@@ -219,28 +217,23 @@ public class CreateContactScenariosTest extends Baseclass {
 		end_dateTF.clear();
 		String enddate = j_util.getDateAftergivendays(30);
 		end_dateTF.sendKeys(enddate);
-		
-		newcon.getSaveBtn();
 
-		
+		newcon.getSaveBtn();
 
 		// verify actual org name with expected org name
 		ClassObject_Utility.getTest().log(Status.INFO, "Verifying the org");
 		ContactDetailPomPage condetail = new ContactDetailPomPage(driver);
-	
+
 		boolean exp_res_con = condetail.getHeader().contains(lastname);
-		Assert.assertEquals(exp_res_con,true);
-		
-		
+		Assert.assertEquals(exp_res_con, true);
+
 		// Verify start sup date and end support date
 		ClassObject_Utility.getTest().log(Status.INFO, "Verifying the date");
 		boolean exp_actstartdate = condetail.getVerifyStartdate().contains(startdate);
 		Assert.assertEquals(exp_actstartdate, true);
-		
 
 		boolean exp_actenddate = condetail.getVerifyEnddate().contains(enddate);
 		Assert.assertEquals(exp_actenddate, true);
-		
 
 		// click on org tab and delete the created org
 		ClassObject_Utility.getTest().log(Status.INFO, "Navigate to org and delete the org");
